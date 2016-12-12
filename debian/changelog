@@ -1,3 +1,23 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.3) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: remote code execution via heap overflow in NDR parsing
+    - debian/patches/CVE-2016-2123.patch: check lengths in
+      librpc/ndr/ndr_dnsp.c.
+    - CVE-2016-2123
+  * SECURITY UPDATE: unconditional privilege delegation to Kerberos servers
+    - debian/patches/CVE-2016-2125.patch: don't use GSS_C_DELEG_FLAG in
+      source4/scripting/bin/nsupdate-gss, source3/librpc/crypto/gse.c,
+      source4/auth/gensec/gensec_gssapi.c.
+    - CVE-2016-2125
+  * SECURITY UPDATE: privilege elevation in Kerberos PAC validation
+    - debian/patches/CVE-2016-2126.patch: only allow known checksum types
+      in auth/kerberos/kerberos_pac.c.
+    - CVE-2016-2126
+  * This package does _not_ contain the changes from
+    2:4.3.11+dfsg-0ubuntu0.16.04.2 in xenial-proposed.
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 12 Dec 2016 08:37:28 -0500
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.1) xenial-security; urgency=medium
 
   * SECURITY UPDATE: client-signing protection mechanism bypass
