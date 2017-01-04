@@ -17,4 +17,6 @@ disable-socketwrapper.diff
 krb_zero_cursor.patch
 winbind_trusted_domains.patch
 git_smbclient_cpu.patch
-
+CVE-2016-2123.patch
+CVE-2016-2125.patch
+CVE-2016-2126.patch
