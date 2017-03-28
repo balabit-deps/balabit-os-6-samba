@@ -1,3 +1,14 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.6) xenial-security; urgency=medium
+
+  * SECURITY REGRESSION: follow symlinks issue (LP: #1675698)
+    - debian/patches/CVE-2017-2619/bug12721-*.patch: add fixes from Samba
+      bug #12721.
+  * Add missing prerequisite for previous update
+    - debian/patches/CVE-2017-2619/bug12172.patch: handle non-existant
+      files and wildcards in source3/modules/vfs_shadow_copy2.c.
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 28 Mar 2017 08:31:57 -0400
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.5) xenial-security; urgency=medium
 
   * SECURITY UPDATE: Symlink race allows access outside share definition
