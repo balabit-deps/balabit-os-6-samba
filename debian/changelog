@@ -1,3 +1,9 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.6bb1) xenial; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Mon, 03 Apr 2017 17:22:00 +0200
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.6) xenial-security; urgency=medium
 
   * SECURITY REGRESSION: follow symlinks issue (LP: #1675698)
