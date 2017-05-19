@@ -1,3 +1,12 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.7) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: remote code execution from a writable share
+    - debian/patches/CVE-2017-7494.patch: refuse to open pipe names with a
+      slash inside in source3/rpc_server/srv_pipe.c.
+    - CVE-2017-7494
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Fri, 19 May 2017 14:18:13 -0400
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.6) xenial-security; urgency=medium
 
   * SECURITY REGRESSION: follow symlinks issue (LP: #1675698)
