@@ -1,3 +1,9 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.7bb1) xenial; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Thu, 25 May 2017 16:51:29 +0200
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.7) xenial-security; urgency=medium
 
   * SECURITY UPDATE: remote code execution from a writable share
