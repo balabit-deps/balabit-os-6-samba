@@ -1,3 +1,28 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.9) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: KDC-REP service name impersonation
+    - debian/patches/CVE-2017-11103.patch: use encrypted service
+      name rather than unencrypted (and therefore spoofable) version
+      in heimdal
+    - CVE-2017-11103
+
+ -- Steve Beattie <sbeattie@ubuntu.com>  Thu, 13 Jul 2017 14:03:40 -0700
+
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.8) xenial-security; urgency=medium
+
+  [ Andreas Hasenack ]
+  * d/p/non-wide-symlinks-to-directories-12860.patch: fix a CVE-2017-2619
+    regression which breaks symlinks to directories on certain systems
+    (LP: #1701073)
+
+  [ Marc Deslauriers ]
+  * SECURITY UPDATE: DoS via bad symlink resolution
+    - debian/patches/CVE-2017-9461.patch: properly handle dangling symlinks
+      in source3/smbd/open.c.
+    - CVE-2017-9461
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 04 Jul 2017 07:56:30 -0400
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.7bb1) xenial; urgency=medium
 
   * Balabit patched version
