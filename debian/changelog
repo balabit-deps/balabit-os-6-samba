@@ -1,3 +1,9 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.9bb1) xenial; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Tue, 25 Jul 2017 12:22:03 +0200
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.9) xenial-security; urgency=medium
 
   * SECURITY UPDATE: KDC-REP service name impersonation
