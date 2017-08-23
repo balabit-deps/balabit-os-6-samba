@@ -1,3 +1,10 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.10) xenial; urgency=medium
+
+  * d/p/bug_1702529_EACCESS_with_rootshare.patch:
+    Handle corner case for / shares. (LP: #1702529)
+
+ -- Dariusz Gadomski <dariusz.gadomski@canonical.com>  Wed, 23 Aug 2017 11:43:46 +0200
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.9) xenial-security; urgency=medium
 
   * SECURITY UPDATE: KDC-REP service name impersonation
