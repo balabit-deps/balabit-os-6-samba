@@ -1,3 +1,9 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.10bb1) xenial; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Wed, 06 Sep 2017 14:36:03 +0200
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.10) xenial; urgency=medium
 
   * d/p/bug_1702529_EACCESS_with_rootshare.patch:
