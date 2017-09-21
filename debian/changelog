@@ -1,3 +1,36 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.11) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: SMB1/2/3 connections may not require signing where
+    they should
+    - debian/patches/CVE-2017-12150-1.patch: add SMB_SIGNING_REQUIRED to
+      source3/lib/util_cmdline.c.
+    - debian/patches/CVE-2017-12150-2.patch: add SMB_SIGNING_REQUIRED to
+      source3/libsmb/pylibsmb.c.
+    - debian/patches/CVE-2017-12150-3.patch: add SMB_SIGNING_REQUIRED to
+      libgpo/gpo_fetch.c.
+    - debian/patches/CVE-2017-12150-4.patch: add check for
+      NTLM_CCACHE/SIGN/SEAL to auth/credentials/credentials.c.
+    - debian/patches/CVE-2017-12150-5.patch: add
+      smbXcli_conn_signing_mandatory() to libcli/smb/smbXcli_base.*.
+    - debian/patches/CVE-2017-12150-6.patch: only fallback to anonymous if
+      authentication was not requested in source3/libsmb/clidfs.c.
+    - CVE-2017-12150
+  * SECURITY UPDATE: SMB3 connections don't keep encryption across DFS
+    redirects
+    - debian/patches/CVE-2017-12151-1.patch: add
+      cli_state_is_encryption_on() helper function to
+      source3/libsmb/clientgen.c, source3/libsmb/proto.h.
+    - debian/patches/CVE-2017-12151-2.patch: make use of
+      cli_state_is_encryption_on() in source3/libsmb/clidfs.c,
+      source3/libsmb/libsmb_context.c.
+    - CVE-2017-12151
+  * SECURITY UPDATE: Server memory information leak over SMB1
+    - debian/patches/CVE-2017-12163.patch: prevent client short SMB1 write
+      from writing server memory to file in source3/smbd/reply.c.
+    - CVE-2017-12163
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 21 Sep 2017 08:02:02 -0400
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.10) xenial; urgency=medium
 
   * d/p/bug_1702529_EACCESS_with_rootshare.patch:

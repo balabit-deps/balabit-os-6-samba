@@ -68,3 +68,12 @@ non-wide-symlinks-to-directories-12860.patch
 CVE-2017-9461.patch
 CVE-2017-11103.patch
 bug_1702529_EACCESS_with_rootshare.patch
+CVE-2017-12150-1.patch
+CVE-2017-12150-2.patch
+CVE-2017-12150-3.patch
+CVE-2017-12150-4.patch
+CVE-2017-12150-5.patch
+CVE-2017-12150-6.patch
+CVE-2017-12151-1.patch
+CVE-2017-12151-2.patch
+CVE-2017-12163.patch
