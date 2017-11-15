@@ -1,3 +1,16 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.12) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: Use-after-free vulnerability
+    - debian/patches/CVE-2017-14746.patch: fix use-after-free crash bug in
+      source3/smbd/process.c, source3/smbd/reply.c.
+    - CVE-2017-14746
+  * SECURITY UPDATE: Server heap memory information leak
+    - debian/patches/CVE-2017-15275.patch: zero out unused grown area in
+      source3/smbd/srvstr.c.
+    - CVE-2017-15275
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 15 Nov 2017 15:40:44 -0500
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.11) xenial-security; urgency=medium
 
   * SECURITY UPDATE: SMB1/2/3 connections may not require signing where
