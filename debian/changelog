@@ -1,3 +1,15 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.13) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: Denial of Service Attack on external print server
+    - debian/patches/CVE-2018-1050.patch: protect against null pointer
+      derefs in source3/rpc_server/spoolss/srv_spoolss_nt.c.
+    - CVE-2018-1050
+  * SECURITY UPDATE: Authenticated users can change other users password
+    - debian/patches/CVE-2018-1057-*.patch: fix password changing logic.
+    - CVE-2018-1057
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 06 Mar 2018 16:49:12 +0100
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.12bb1) xenial; urgency=medium
 
   * Balabit patched version
