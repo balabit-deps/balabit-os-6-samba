@@ -102,3 +102,4 @@ CVE-2018-10919-7.patch
 CVE-2018-10919-8.patch
 CVE-2018-10919-9.patch
 CVE-2018-10919-10.patch
+bug_1583324_include_with_macro.patch

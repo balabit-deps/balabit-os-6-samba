@@ -1,0 +1,65 @@
+From 3c6ea3293c6aac67bc442f47185fd494714e4806 Mon Sep 17 00:00:00 2001
+From: Quentin Gibeaux <qgibeaux@iris-tech.fr>
+Date: Thu, 29 Oct 2015 13:48:27 +0100
+Subject: [PATCH] lib/param: handle (ignore) substitution variable in smb.conf
+
+BUG: https://bugzilla.samba.org/show_bug.cgi?id=10722
+
+The function handle_include returns false when trying to include
+files that have a substitution variable in filename (like %U),
+this patch makes handle_include to ignore this case, to make
+samba-tool work when there is such include in samba's configuration.
+
+Error was :
+	root@ubuntu:/usr/local/samba# grep 'include.*%U' etc/smb.conf
+	include = %U.conf
+	root@ubuntu:/usr/local/samba# ./bin/samba-tool user list
+	Can't find include file %U.conf
+	ERROR(runtime): uncaught exception - Unable to load default file
+
+Signed-off-by: Quentin Gibeaux <qgibeaux@iris-tech.fr>
+Reviewed-by: Michael Adam <obnox@samba.org>
+Reviewed-by: Jeremy Allison <jra@samba.org>
+
+Autobuild-User(master): Jeremy Allison <jra@samba.org>
+Autobuild-Date(master): Wed Dec  9 02:05:30 CET 2015 on sn-devel-104
+Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/samba/+bug/1583324
+Last-Update: 2018-10-02
+---
+ lib/param/loadparm.c | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+
+--- a/lib/param/loadparm.c
++++ b/lib/param/loadparm.c
+@@ -1109,6 +1109,8 @@
+ 			   const char *pszParmValue, char **ptr)
+ {
+ 	char *fname;
++	const char *substitution_variable_substring;
++	char next_char;
+ 
+ 	if (lp_ctx->s3_fns) {
+ 		return lp_ctx->s3_fns->lp_include(lp_ctx, service, pszParmValue, ptr);
+@@ -1123,6 +1125,22 @@
+ 	if (file_exist(fname))
+ 		return pm_process(fname, do_section, lpcfg_do_parameter, lp_ctx);
+ 
++       /*
++        * If the file doesn't exist, we check that it isn't due to variable
++        * substitution
++        */
++	substitution_variable_substring = strchr(fname, '%');
++
++	if (substitution_variable_substring != NULL) {
++		next_char = substitution_variable_substring[1];
++		if ((next_char >= 'a' && next_char <= 'z')
++		    || (next_char >= 'A' && next_char <= 'Z')) {
++			DEBUG(2, ("Tried to load %s but variable substitution in "
++				 "filename, ignoring file.\n", fname));
++			return true;
++		}
++	}
++
+ 	DEBUG(2, ("Can't find include file %s\n", fname));
+ 
+ 	return false;
