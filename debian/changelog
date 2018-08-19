@@ -1,3 +1,17 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.15) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: Insufficient input validation on client directory
+    listing in libsmbclient
+    - debian/patches/CVE-2018-10858-*.patch: don't overwrite passed in
+      buffer in source3/libsmb/libsmb_path.c, add checks to
+      source3/libsmb/libsmb_dir.c, source3/libsmb/libsmb_path.c.
+    - CVE-2018-10858
+  * SECURITY UPDATE: Confidential attribute disclosure AD LDAP server
+    - debian/patches/CVE-2018-10919-*.patch: fix access checks.
+    - CVE-2018-10919
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 06 Aug 2018 07:40:17 -0400
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.13bb1) xenial; urgency=medium
 
   * Balabit patched version
