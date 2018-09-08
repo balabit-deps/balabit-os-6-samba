@@ -1,3 +1,9 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.16bb1) bionic; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 08 Sep 2018 04:22:44 +0200
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.16) xenial; urgency=medium
 
   * d/p/bug_1583324_include_with_macro.patch: don't fail parsing the
