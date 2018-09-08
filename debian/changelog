@@ -1,3 +1,10 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.16) xenial; urgency=medium
+
+  * d/p/bug_1583324_include_with_macro.patch: don't fail parsing the
+    config file if it has macros in include directives (LP: #1583324)
+
+ -- Andreas Hasenack <andreas@canonical.com>  Thu, 02 Aug 2018 18:30:26 -0300
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.15bb1) bionic; urgency=medium
 
   * Balabit patched version
