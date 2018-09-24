@@ -1,3 +1,14 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.17) xenial; urgency=medium
+
+  * d/samba.nmbd.init, d/samba.samba-ad-dc.init, d/samba.smbd.init, d/winbind.init
+    avoid issues due to init scripts misdetecting services (LP: #1792400)
+    - use --pidfile on --start to not block on same binaries running in
+      containers
+    - use --exec on --stop to not cause unintended processes to be acted on,
+      if the old process terminated without being able to remove the pid-file.
+
+ -- Christian Ehrhardt <christian.ehrhardt@canonical.com>  Mon, 24 Sep 2018 12:08:45 +0200
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.16) xenial; urgency=medium
 
   * d/p/bug_1583324_include_with_macro.patch: don't fail parsing the
