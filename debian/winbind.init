@@ -42,7 +42,7 @@ case "$1" in
 		mkdir -p /var/run/samba/winbindd_privileged || return 1
 		chgrp winbindd_priv $PIDDIR/winbindd_privileged/ || return 1
 		chmod 0750 $PIDDIR/winbindd_privileged/ || return 1
-		start-stop-daemon --start --quiet --oknodo --exec $DAEMON -- $WINBINDD_OPTS
+		start-stop-daemon --start --quiet --oknodo --exec $DAEMON --pidfile $WINBINDPID -- $WINBINDD_OPTS
 
 		log_end_msg $?
 		;;
@@ -52,7 +52,7 @@ case "$1" in
 			exit 0
 		fi
 		log_daemon_msg "Stopping the Winbind daemon" "winbind"
-		start-stop-daemon --stop --quiet --oknodo --exec $DAEMON
+		start-stop-daemon --stop --quiet --oknodo --exec $DAEMON --pidfile $WINBINDPID
 		log_end_msg $?
 		;;
 

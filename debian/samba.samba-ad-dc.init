@@ -54,7 +54,7 @@ case "$1" in
 		# Make sure we have our PIDDIR, even if it's on a tmpfs
 		install -o root -g root -m 755 -d $PIDDIR
 
-		if ! start-stop-daemon --start --quiet --oknodo --exec /usr/sbin/samba -- -D; then
+		if ! start-stop-daemon --start --quiet --oknodo --exec /usr/sbin/samba --pidfile $SAMBAPID -- -D; then
 			log_end_msg 1
 			exit 1
 		fi
@@ -67,7 +67,7 @@ case "$1" in
 		fi
 		log_daemon_msg "Stopping Samba AD DC daemon" "samba"
 
-		start-stop-daemon --stop --quiet --pidfile $SAMBAPID
+		start-stop-daemon --stop --quiet --exec /usr/sbin/samba --pidfile $SAMBAPID
 		# Wait a little and remove stale PID file
 		sleep 1
 		if [ -f $SAMBAPID ] && ! ps h `cat $SAMBAPID` > /dev/null
