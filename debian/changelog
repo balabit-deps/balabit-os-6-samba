@@ -1,3 +1,9 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.17bb1) bionic; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 13 Oct 2018 04:21:44 +0200
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.17) xenial; urgency=medium
 
   * d/samba.nmbd.init, d/samba.samba-ad-dc.init, d/samba.smbd.init, d/winbind.init
