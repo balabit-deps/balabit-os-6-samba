@@ -1,3 +1,12 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.19) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: save registry file outside share as unprivileged user
+    - debian/patches/CVE-2019-3880.patch: remove implementations of
+      SaveKey/RestoreKey in source3/rpc_server/winreg/srv_winreg_nt.c.
+    - CVE-2019-3880
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 01 Apr 2019 10:09:39 -0400
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.18) xenial-security; urgency=medium
 
   * SECURITY UPDATE: Unprivileged adding of CNAME record causing loop in AD
