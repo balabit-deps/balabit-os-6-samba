@@ -1,3 +1,12 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.20) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: Samba AD DC S4U2Self/S4U2Proxy unkeyed checksum
+    - debian/patches/CVE-2018-16860.patch: reject PA-S4U2Self with unkeyed
+      checksum in source4/heimdal/kdc/krb5tgs.c.
+    - CVE-2018-16860
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 08 May 2019 09:44:23 -0400
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.19bb1) xenial; urgency=medium
 
   * Balabit patched version
