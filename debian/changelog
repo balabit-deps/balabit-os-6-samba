@@ -1,3 +1,9 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.21bb1) xenial; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 01 Jun 2019 04:27:41 +0200
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.21) xenial-security; urgency=medium
 
   * SECURITY REGRESSION: panics following recent update (LP: #1827924)
