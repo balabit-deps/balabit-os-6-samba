@@ -1,3 +1,28 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.23) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: client code can return filenames containing path
+    separators
+    - debian/patches/CVE-2019-10218-1.patch: protect SMB1 client code
+      from evil server returned names in source3/libsmb/clilist.c,
+      source3/libsmb/proto.h.
+    - debian/patches/CVE-2019-10218-2.patch: Protect SMB2 client code
+      from evil server returned names in source3/libsmb/cli_smb2_fnum.c.
+    - CVE-2019-10218
+  * SECURITY UPDATE: User with "get changes" permission can crash AD DC
+    LDAP server via dirsync
+    - debian/patches/CVE-2019-14847-1.patch: ensure attrs exist in
+      source4/dsdb/samdb/ldb_modules/dirsync.c.
+    - debian/patches/CVE-2019-14847-2.patch: demonstrate the correct
+      interaction of ranged_results style attributes and dirsync in
+      source4/dsdb/tests/python/dirsync.py.
+    - debian/patches/CVE-2019-14847-3.patch: correct behaviour of
+      ranged_results when combined with dirsync in
+      source4/dsdb/samdb/ldb_modules/dirsync.c,
+      source4/dsdb/samdb/ldb_modules/ranged_results.c.
+    - CVE-2019-14847
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 21 Oct 2019 08:53:51 -0400
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.21bb1) xenial; urgency=medium
 
   * Balabit patched version
