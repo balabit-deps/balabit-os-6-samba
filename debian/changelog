@@ -1,3 +1,9 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.24bb1) xenial; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 14 Dec 2019 04:28:23 +0100
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.24) xenial-security; urgency=medium
 
   * SECURITY UPDATE: Samba AD DC zone-named record Denial of Service in DNS
