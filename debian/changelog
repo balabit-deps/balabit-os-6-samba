@@ -1,3 +1,9 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.25bb1) xenial; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 25 Jan 2020 04:25:07 +0100
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.25) xenial-security; urgency=medium
 
   * SECURITY UPDATE: Crash after failed character conversion at log level 3
