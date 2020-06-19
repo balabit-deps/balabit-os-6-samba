@@ -1,3 +1,13 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.28) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: Parsing and packing of NBT and DNS packets can consume
+    excessive CPU
+    - debian/patches/CVE-2020-10745-*.patch: multiple upstream patches to
+      fix the issue.
+    - CVE-2020-10745
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Fri, 19 Jun 2020 09:04:51 -0400
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.27) xenial-security; urgency=medium
 
   * SECURITY REGRESSION: new LDAP options not recognized (LP: #1875798)
