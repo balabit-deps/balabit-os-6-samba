@@ -1,3 +1,12 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.29) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: Empty UDP packet DoS in Samba AD DC nbtd
+    - debian/patches/CVE-2020-14303.patch: fix busy loop on empty UDP
+      packet in libcli/nbt/nbtsocket.c.
+    - CVE-2020-14303
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Fri, 07 Aug 2020 13:39:56 -0400
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.28) xenial-security; urgency=medium
 
   * SECURITY UPDATE: Parsing and packing of NBT and DNS packets can consume
