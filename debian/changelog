@@ -1,3 +1,9 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.29bb1) xenial; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 15 Aug 2020 04:28:54 +0200
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.29) xenial-security; urgency=medium
 
   * SECURITY UPDATE: Empty UDP packet DoS in Samba AD DC nbtd
