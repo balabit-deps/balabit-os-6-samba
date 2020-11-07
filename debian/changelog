@@ -1,3 +1,9 @@
+samba (2:4.3.11+dfsg-0ubuntu0.16.04.32bb1) xenial; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 07 Nov 2020 04:30:44 +0100
+
 samba (2:4.3.11+dfsg-0ubuntu0.16.04.32) xenial-security; urgency=medium
 
   * SECURITY UPDATE: Missing handle permissions check in ChangeNotify
